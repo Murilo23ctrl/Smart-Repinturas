@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const mensagem = document.getElementById('mensagem').value.trim();
 
     const texto = `Olá! Meu nome é ${nome}.%0ATelefone: ${telefone}%0A%0A${mensagem}`;
-    const whatsappURL = `https://wa.me/5516000000000?text=${texto}`;
+    const whatsappURL = `https://wa.me/5516997085857?text=${texto}`;
 
     formNote.textContent = 'Redirecionando para o WhatsApp...';
     formNote.style.color = '#34c759';

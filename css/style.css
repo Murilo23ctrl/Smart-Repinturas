@@ -188,7 +188,9 @@ section{ position:relative; padding:110px 0; }
   height:64px;
   background:rgba(5,5,5,.92);
 }
-
+.site-header img{
+ width: 25vh;
+}
 .header-inner{
   height:100%;
   max-width:1440px;
