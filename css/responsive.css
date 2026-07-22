@@ -50,11 +50,13 @@
   section{ padding:80px 0; }
   .hero-content{ max-width:100%; }
   .training-content, .ml-content, .wpp-content{ padding:60px 6vw; }
+  .site-header img{ width: 18vh;}
 }
 
 /* ---------- Smartphone (≤640px) ---------- */
 @media (max-width:640px){
   :root{ --header-h:74px; }
+  .site-header img{ width: 15vh;}
   .header-inner{ padding:0 18px; }
   .brand .brand-mark{ font-size:1.2rem; }
   .header-actions .icon-btn{ display:none; }
