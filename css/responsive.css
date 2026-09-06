@@ -49,6 +49,7 @@
   .form-row{ grid-template-columns:1fr; }
   section{ padding:80px 0; }
   .hero-content{ max-width:100%; }
+  .hero-slide{ background-position:center 30%; }
   .training-content, .ml-content, .wpp-content{ padding:60px 6vw; }
   .site-header img{ width: 18vh;}
 }
@@ -61,6 +62,19 @@
   .brand .brand-mark{ font-size:1.2rem; }
   .header-actions .icon-btn{ display:none; }
 
+  .hero{
+    min-height:100vh;
+    min-height:100svh; /* altura estável no celular, sem "pulo" ao rolar */
+  }
+  .hero-slide{ background-position:center 25%; }
+  .hero-scrim{
+    background:
+      linear-gradient(180deg, rgba(5,5,5,.4) 0%, rgba(5,5,5,.7) 45%, rgba(5,5,5,.94) 100%),
+      linear-gradient(90deg, rgba(5,5,5,.92) 0%, rgba(5,5,5,.55) 100%);
+  }
+  .hero-vignette{
+    background:radial-gradient(ellipse at 50% 60%, transparent 25%, rgba(0,0,0,.55) 100%);
+  }
   .hero-title{ font-size:clamp(2.2rem,10vw,3rem); }
   .hero-buttons{ flex-direction:column; align-items:stretch; }
   .hero-buttons .btn{ justify-content:center; }

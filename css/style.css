@@ -277,6 +277,7 @@ section{ position:relative; padding:110px 0; }
 .hero{
   position:relative;
   min-height:100vh;
+  min-height:100dvh; /* usa a altura real visível no mobile, evita "salto" quando a barra do navegador aparece/some */
   display:flex;
   align-items:center;
   padding-top:var(--header-h);
