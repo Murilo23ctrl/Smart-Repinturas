@@ -51,13 +51,15 @@
   .hero-content{ max-width:100%; }
   .hero-slide{ background-position:center 30%; }
   .training-content, .ml-content, .wpp-content{ padding:60px 6vw; }
-  .site-header img{ width: 18vh;}
+  .site-header img{ height: 60px; width:auto;}
+  .hero-media{ inset:24px; }
 }
 
 /* ---------- Smartphone (≤640px) ---------- */
 @media (max-width:640px){
   :root{ --header-h:74px; }
-  .site-header img{ width: 15vh;}
+  .site-header img{ height: 50px; width:auto;}
+  .hero-media{ inset:16px; border-radius:12px; }
   .header-inner{ padding:0 18px; }
   .brand .brand-mark{ font-size:1.2rem; }
   .header-actions .icon-btn{ display:none; }

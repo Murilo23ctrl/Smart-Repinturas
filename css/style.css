@@ -189,7 +189,12 @@ section{ position:relative; padding:110px 0; }
   background:rgba(5,5,5,.92);
 }
 .site-header img{
- width: 25vh;
+ height: 72px; /* logo maior, mantendo a proporção (largura automática) */
+ width: auto;
+ transition: height .35s var(--ease);
+}
+.site-header.scrolled img{
+ height: 52px; /* acompanha o header reduzido ao rolar a página */
 }
 .header-inner{
   height:100%;
@@ -283,7 +288,7 @@ section{ position:relative; padding:110px 0; }
   padding-top:var(--header-h);
   overflow:hidden;
 }
-.hero-media{ position:absolute; inset:0; background:var(--black-1); }
+.hero-media{ position:absolute; inset:40px; border-radius:var(--radius-lg); overflow:hidden; background:var(--black-1); }
 .hero-slide{
   position:absolute; inset:0;
   background-size:cover;
@@ -417,8 +422,16 @@ section{ position:relative; padding:110px 0; }
   display:flex; align-items:center; justify-content:center;
   margin-bottom:20px;
   color:var(--white);
+  transition:background .4s var(--ease), border-color .4s var(--ease), color .4s var(--ease);
 }
 .diff-icon svg{ width:24px; height:24px; }
+.diff-card:hover .diff-icon{
+  background:var(--rgb-grad);
+  background-size:250% 100%;
+  animation:rgbSlide 3s linear infinite;
+  border-color:transparent;
+  color:var(--black-0);
+}
 .diff-card h3{ font-size:1.2rem; margin-bottom:8px; letter-spacing:.02em; }
 .diff-card p{ color:var(--gray-mid); font-size:.88rem; }
 
@@ -649,7 +662,7 @@ section{ position:relative; padding:110px 0; }
   gap:80px;
   padding:30px 0;
   width:max-content;
-  animation:brandScroll 26s linear infinite;
+  animation:brandScroll 14s linear infinite;
 }
 .brands-row span{
   font-family:var(--font-display);
@@ -657,10 +670,20 @@ section{ position:relative; padding:110px 0; }
   letter-spacing:.08em;
   color:var(--gray-mid);
   white-space:nowrap;
+  transition:color .3s var(--ease);
+  cursor:default;
+}
+.brands-row span:hover{
+  background:var(--rgb-grad);
+  background-size:250% 100%;
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+  animation:rgbSlide 3s linear infinite;
 }
 @keyframes brandScroll{
   0%{ transform:translateX(0); }
-  100%{ transform:translateX(-50%); }
+  100%{ transform:translateX(-25%); }
 }
 
 /* =========================================================
@@ -759,6 +782,7 @@ section{ position:relative; padding:110px 0; }
    RODAPÉ
 ========================================================= */
 .site-footer{ background:var(--black-1); padding-top:70px; }
+.site-footer .rgb-line{ margin-bottom:48px; }
 .footer-inner{
   max-width:1320px;
   margin:0 auto;

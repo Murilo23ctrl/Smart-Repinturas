@@ -40,21 +40,46 @@ document.addEventListener('DOMContentLoaded', () => {
   const yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-  /* ---------- Ativa link do menu conforme seção visível ---------- */
+  /* ---------- Ativa link do menu conforme a seção MAIS visível ---------- */
   const sections = document.querySelectorAll('section[id]');
   const navLinks = document.querySelectorAll('.main-nav a');
 
+  const setActiveLink = (id) => {
+    navLinks.forEach(link => {
+      link.classList.toggle('active', link.getAttribute('href') === `#${id}`);
+    });
+  };
+
+  /* guarda o quanto cada seção está visível no momento */
+  const visibleRatios = new Map();
+
   const navObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const id = entry.target.getAttribute('id');
-        navLinks.forEach(link => {
-          link.classList.toggle('active', link.getAttribute('href') === `#${id}`);
-        });
+      visibleRatios.set(entry.target.id, entry.isIntersecting ? entry.intersectionRatio : 0);
+    });
+
+    /* escolhe a seção com maior porcentagem visível na tela
+       (evita que duas seções próximas "disputem" o item ativo) */
+    let bestId = null;
+    let bestRatio = 0;
+    visibleRatios.forEach((ratio, id) => {
+      if (ratio > bestRatio) {
+        bestRatio = ratio;
+        bestId = id;
       }
     });
-  }, { threshold: 0.4 });
+
+    if (bestId) setActiveLink(bestId);
+  }, { threshold: [0, .1, .2, .3, .4, .5, .6, .7, .8, .9, 1] });
 
   sections.forEach(sec => navObserver.observe(sec));
+
+  /* ---------- Resposta imediata ao clicar no menu ---------- */
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      const id = link.getAttribute('href').replace('#', '');
+      setActiveLink(id);
+    });
+  });
 
 });
