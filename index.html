@@ -70,8 +70,18 @@
 <!-- ======== HERO ======== -->
 <section class="hero" id="topo">
   <div class="hero-media" id="heroMedia">
-    <div class="hero-slide active" style="background-image:url('assets/images/hero-banner.png')"></div>
-    <div class="hero-slide" style="background-image:url('assets/images/hero-banner2.png')"></div>
+    <div class="hero-slide active">
+      <picture>
+        <source media="(max-width:640px)" srcset="assets/images/hero-banner-mobile.jpg" width="400" height="600">
+        <img src="assets/images/hero-banner-desktop.jpg" width="1920" height="600" alt="" fetchpriority="high" decoding="async">
+      </picture>
+    </div>
+    <div class="hero-slide">
+      <picture>
+        <source media="(max-width:640px)" srcset="assets/images/hero-banner2-mobile.jpg" width="400" height="600">
+        <img src="assets/images/hero-banner2-desktop.jpg" width="1920" height="600" alt="" loading="lazy" decoding="async">
+      </picture>
+    </div>
     <div class="hero-scrim"></div>
     <div class="hero-vignette"></div>
   </div>

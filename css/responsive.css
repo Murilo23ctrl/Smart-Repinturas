@@ -50,6 +50,7 @@
   section{ padding:80px 0; }
   .hero-content{ max-width:100%; }
   .hero-slide{ background-position:center 30%; }
+  .hero-slide img{ object-position:center 30%; }
   .training-content, .ml-content, .wpp-content{ padding:60px 6vw; }
   .site-header img{ height: 60px; width:auto;}
   .hero-media{ inset:24px; }
@@ -69,6 +70,7 @@
     min-height:100svh; /* altura estável no celular, sem "pulo" ao rolar */
   }
   .hero-slide{ background-position:center 25%; }
+  .hero-slide img{ object-position:center; }
   .hero-scrim{
     background:
       linear-gradient(180deg, rgba(5,5,5,.4) 0%, rgba(5,5,5,.7) 45%, rgba(5,5,5,.94) 100%),
