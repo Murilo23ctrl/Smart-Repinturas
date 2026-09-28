@@ -1,0 +1,28 @@
+/* ===========================================================
+   SMART REPINTURAS — ANIMATIONS.CSS
+   Classes controladas via Intersection Observer (scroll.js)
+=========================================================== */
+
+.reveal-up{
+  opacity:0;
+  transform:translateY(28px);
+  transition:opacity .8s var(--ease), transform .8s var(--ease);
+}
+.reveal-up.in-view{
+  opacity:1;
+  transform:translateY(0);
+}
+
+/* delay em cascata para grids (aplicado via JS com --d custom prop) */
+.diff-card, .product-card, .blog-card{
+  transition-delay: var(--d, 0s);
+}
+
+@media (prefers-reduced-motion: reduce){
+  *{
+    animation-duration:.001ms !important;
+    animation-iteration-count:1 !important;
+    transition-duration:.001ms !important;
+    scroll-behavior:auto !important;
+  }
+}

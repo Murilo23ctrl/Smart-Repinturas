@@ -1,0 +1,75 @@
+SMART REPINTURAS — SITE INSTITUCIONAL
+========================================
+
+COMO ABRIR
+----------
+Basta abrir o arquivo "index.html" em qualquer navegador.
+Para melhor desempenho, sirva a pasta com um servidor local
+(ex: extensão "Live Server" do VS Code) em vez de abrir o
+arquivo direto pelo sistema de arquivos.
+
+O HERO (topo do site) agora é um carrossel com fade automático entre
+2 imagens de fundo (troca a cada 6s, com bolinhas clicáveis à direita).
+A primeira imagem já é a sua foto (hero-banner.png). A segunda ainda
+é um placeholder temporário — quando você tiver a nova imagem, salve-a
+em assets/images/ e troque o link no index.html, procurando por
+"hero-car-2" dentro da tag com id="heroMedia".
+
+IMAGENS
+-------
+O site agora já exibe imagens automaticamente (placeholders reais,
+hospedados online via picsum.photos), então basta abrir o
+index.html e tudo aparece preenchido — nenhuma pasta local
+precisa ser configurada para o site funcionar.
+
+Quando você tiver as fotografias reais da empresa, é só substituir
+o link de cada imagem no index.html pelo caminho do seu arquivo
+local (ex: trocar "https://picsum.photos/seed/hero-car/1600/1000"
+por "assets/images/hero-car.jpg", depois de colocar o arquivo
+hero-car.jpg dentro de assets/images/).
+
+Locais de cada imagem no index.html (busque pelo texto):
+
+  hero-car            → veículo preto sendo pintado (topo do site)
+  colorimetria        → laboratório de colorimetria (retrato 4:5)
+  treinamento         → treinamento prático em oficina
+  youtube-banner      → cena de estúdio/gravação
+  mercado-livre       → produtos Smart Repinturas
+  whatsapp            → atendimento / smartphone
+  blog-1 / blog-2 / blog-3 → imagens de artigos do blog
+
+  prod-tinta-pu, prod-tinta-poliester, prod-vernizes, prod-primer,
+  prod-catalisadores, prod-thinner, prod-massas, prod-lixas,
+  prod-polimento, prod-fitas, prod-equipamentos, prod-epis,
+  prod-abrasivos, prod-consumiveis → categorias de produtos (1:1)
+
+Recomenda-se comprimir as imagens reais (formato .webp ou .jpg
+otimizado) para manter o site rápido.
+
+DADOS A COMPLETAR
+------------------
+1. Número de WhatsApp: procure por "5516000000000" em index.html
+   e js/script.js e substitua pelo número completo (DDI+DDD+número).
+2. Marcas parceiras: substitua os textos "MARCA A/B/C..." na seção
+   .brands por logotipos reais (recomenda-se imagens SVG/PNG com
+   fundo transparente, altura ~40px).
+3. Links de redes sociais e Mercado Livre já apontam para os
+   endereços informados no briefing — ajuste se necessário.
+
+ESTRUTURA
+---------
+index.html
+css/
+  style.css        → tokens, layout e todos os componentes
+  responsive.css   → breakpoints (desktop, notebook, tablet, mobile)
+  animations.css   → classes de revelação no scroll
+js/
+  script.js        → loader, menu mobile, formulário
+  slider.js        → slider automático de depoimentos
+  scroll.js        → header inteligente + Intersection Observer
+assets/
+  images/ icons/ videos/
+fonts/
+favicon/
+
+Nenhum framework foi utilizado — HTML5, CSS3 e JavaScript puro (Vanilla JS).

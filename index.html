@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Smart Repinturas | Tudo para sua repintura automotiva</title>
+<meta name="description" content="Smart Repinturas — tintas automotivas, colorimetria, vernizes, primers, equipamentos e treinamentos para oficinas. Autoridade em repintura automotiva.">
+
+<link rel="icon" type="image/png" href="./assets/icons/icon.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/responsive.css">
+<link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+
+<!-- ======== LOADER ======== -->
+<div class="page-loader" id="pageLoader">
+  <div class="loader-mark">Smart Repinturas</div>
+  <div class="loader-bar"><span></span></div>
+</div>
+
+<!-- ======== HEADER ======== -->
+<header class="site-header" id="siteHeader">
+  <div class="header-inner">
+
+    <a class="brand" aria-label="Smart Repinturas — início">
+      <img src="./assets/icons/logo.png" alt="">
+    </a>
+
+    <nav class="main-nav" id="mainNav">
+      <ul>
+        <li><a href="#topo" class="active">Início</a></li>
+        <li><a href="#quem-somos">Quem Somos</a></li>
+        <li><a href="#produtos">Produtos</a></li>
+        <li><a href="#atendimento">Atendimento Online</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+
+    <div class="header-actions">
+      <!-- <a target="_blank" rel="noopener" class="icon-btn" data-tip="Mercado Livre" aria-label="Mercado Livre">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M3 9.5 12 4l9 5.5M5 8.5V19a1 1 0 0 0 1 1h4v-5h4v5h4a1 1 0 0 0 1-1V8.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a> -->
+      <a href="https://instagram.com/smart.repintura" target="_blank" rel="noopener" class="icon-btn" data-tip="Instagram" aria-label="Instagram">
+        <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/></svg>
+      </a>
+      <a href="https://youtube.com" target="_blank" rel="noopener" class="icon-btn" data-tip="YouTube" aria-label="YouTube">
+        <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.01 2.01 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.01 2.01 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31 31 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.01 2.01 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A100 100 0 0 1 7.858 2zM6.4 5.209v4.818l4.157-2.408z"/></svg>
+      </a>
+      <a href="https://wa.me/5516997085857" target="_blank" rel="noopener" class="btn btn-cta-header">Falar Agora</a>
+    </div>
+
+    <button class="burger" id="burgerBtn" aria-label="Abrir menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="rgb-line"></div>
+</header>
+
+<!-- ======== HERO ======== -->
+<section class="hero" id="topo">
+  <div class="hero-media" id="heroMedia">
+    <div class="hero-slide active">
+      <picture>
+        <source media="(max-width:640px)" srcset="assets/images/hero-banner-mobile.jpg" width="400" height="600">
+        <img src="assets/images/hero-banner-desktop.jpg" width="1920" height="600" alt="" fetchpriority="high" decoding="async">
+      </picture>
+    </div>
+    <div class="hero-slide">
+      <picture>
+        <source media="(max-width:640px)" srcset="assets/images/hero-banner2-mobile.jpg" width="400" height="600">
+        <img src="assets/images/hero-banner2-desktop.jpg" width="1920" height="600" alt="" loading="lazy" decoding="async">
+      </picture>
+    </div>
+    <div class="hero-scrim"></div>
+    <div class="hero-vignette"></div>
+  </div>
+
+  <div class="hero-content reveal-up">
+    <span class="eyebrow">Especialistas em Repintura Automotiva</span>
+    <h1 class="hero-title">A COR CERTA,<br><span>A SOLUÇÃO É CERTA.</span></h1>
+    <p class="hero-text">Tintas, vernizes, primers, colorimetria e equipamentos de alta performance para oficinas que não abrem mão de qualidade. Mais de 20 mil cores e suporte técnico especializado do início ao acabamento.</p>
+
+    <div class="hero-buttons">
+      <!-- <a target="_blank" rel="noopener" class="btn btn-primary">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M3 9.5 12 4l9 5.5M5 8.5V19a1 1 0 0 0 1 1h4v-5h4v5h4a1 1 0 0 0 1-1V8.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Comprar no Mercado Livre
+      </a> -->
+      <a href="https://wa.me/5516997085857" target="_blank" rel="noopener" class="btn btn-outline">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
+  <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
+</svg>
+        Comprar pelo WhatsApp
+      </a>
+    </div>
+
+    <div class="rgb-line hero-rgb"></div>
+  </div>
+
+  <div class="hero-dots" id="heroDots"></div>
+
+  <div class="hero-scroll-cue">
+    <span></span>
+    <p>Role para explorar</p>
+
+  </div>
+</section>
+
+<!-- ======== DIFERENCIAIS ======== -->
+<section class="differentials" id="quem-somos">
+  <div class="section-head reveal-up">
+    <span class="eyebrow">Por que a Smart</span>
+    <h2>Estrutura completa para sua oficina evoluir</h2>
+  </div>
+
+  <div class="diff-grid">
+
+    <div class="diff-card reveal-up">
+      <div class="diff-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M12 2 3 7v6c0 5 4 8.5 9 9 5-.5 9-4 9-9V7l-9-5Z" stroke="currentColor" stroke-width="1.5"/><path d="m9 12 2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <h3>Especialistas</h3>
+      <p>Equipe técnica com décadas de experiência em repintura automotiva.</p>
+    </div>
+
+    <div class="diff-card reveal-up">
+      <div class="diff-icon"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.5"/><path d="M12 3v9l6 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+      <h3>Colorimetria</h3>
+      <p>Sistema de identificação de cor de precisão para acabamento perfeito.</p>
+    </div>
+
+    <div class="diff-card reveal-up">
+      <div class="diff-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M4 19V5a1 1 0 0 1 1-1h9l6 6v9a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1Z" stroke="currentColor" stroke-width="1.5"/><path d="M14 4v6h6" stroke="currentColor" stroke-width="1.5"/></svg></div>
+      <h3>Treinamentos</h3>
+      <p>Capacitação prática para profissionais que buscam alta performance.</p>
+    </div>
+
+    <div class="diff-card reveal-up">
+      <div class="diff-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M3 12h4l2-6 4 12 2-6h6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <h3>Entrega Rápida</h3>
+      <p>Logística ágil para sua oficina nunca parar a produção.</p>
+    </div>
+
+    <div class="diff-card reveal-up">
+      <div class="diff-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M12 22s7-4.3 7-11V5l-7-3-7 3v6c0 6.7 7 11 7 11Z" stroke="currentColor" stroke-width="1.5"/></svg></div>
+      <h3>Suporte Técnico</h3>
+      <p>Atendimento especializado antes, durante e depois da compra.</p>
+    </div>
+
+    <div class="diff-card reveal-up">
+      <div class="diff-icon"><svg viewBox="0 0 24 24" fill="none"><path d="m12 2 2.6 6.6L21 12l-6.4 3.4L12 22l-2.6-6.6L3 12l6.4-3.4L12 2Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg></div>
+      <h3>Produtos Premium</h3>
+      <p>Linha completa das marcas mais confiáveis do mercado automotivo.</p>
+    </div>
+
+    <div class="diff-card reveal-up">
+      <div class="diff-icon"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="3.2" stroke="currentColor" stroke-width="1.5"/><path d="M12 2v3M12 19v3M22 12h-3M5 12H2M18.4 5.6l-2.1 2.1M7.7 16.3l-2.1 2.1M18.4 18.4l-2.1-2.1M7.7 7.7 5.6 5.6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+      <h3>+20 Mil Cores</h3>
+      <p>Biblioteca cromática extensa para qualquer marca e ano de veículo.</p>
+    </div>
+
+    <div class="diff-card reveal-up">
+      <div class="diff-icon"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M8 20h8M12 18v2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+      <h3>Tecnologia</h3>
+      <p>Equipamentos e sistemas de ponta para resultado de alta precisão.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ======== PRODUTOS ======== -->
+<section class="products" id="produtos">
+  <div class="section-head reveal-up">
+    <span class="eyebrow">Catálogo</span>
+    <h2>Tudo o que sua oficina precisa, em um só lugar.</h2>
+    <p class="section-lead">Linha completa de produtos para repintura automotiva profissional.</p>
+  </div>
+
+  <div class="product-grid">
+    <a class="product-card reveal-up"><span class="pc-img" style="background-image:url('./assets/images/pu.jpg')"></span><span class="pc-name">Tintas PU</span></a>
+    <a class="product-card reveal-up"><span class="pc-img" style="background-image:url('./assets/images/poliester.png')"></span><span class="pc-name">Tintas Poliéster</span></a>
+    <a class="product-card reveal-up"><span class="pc-img" style="background-image:url('./assets/images/verniz.jpg')"></span><span class="pc-name">Vernizes</span></a>
+    <a class="product-card reveal-up"><span class="pc-img" style="background-image:url('./assets/images/primer.png')"></span><span class="pc-name">Primer</span></a>
+    <a class="product-card reveal-up"><span class="pc-img" style="background-image:url('./assets/images/catalisador.png')"></span><span class="pc-name">Catalisadores</span></a>
+    <a class="product-card reveal-up"><span class="pc-img" style="background-image:url('./assets/images/massas.jpg')"></span><span class="pc-name">Massas</span></a>
+  </div>
+</section>
+
+<!-- ======== YOUTUBE ======== -->
+<section class="youtube-banner" id="videos">
+  <div class="yt-media">
+    <img src="./assets/images/yt-img.png" alt="Vídeos técnicos Smart Repinturas no YouTube">
+    <div class="hero-scrim"></div>
+    <div class="yt-glow"></div>
+  </div>
+  <div class="yt-content reveal-up">
+    <div class="yt-logo">
+      <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.01 2.01 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.01 2.01 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31 31 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.01 2.01 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A100 100 0 0 1 7.858 2zM6.4 5.209v4.818l4.157-2.408z"/></svg>
+    </div>
+    <span class="eyebrow">Canal Oficial</span>
+    <h2>Aprenda na prática com nossos vídeos</h2>
+    <p>Tutoriais, testes de produto e dicas de aplicação direto do nosso canal.</p>
+    <a href="https://youtube.com" target="_blank" rel="noopener" class="btn btn-primary">Assistir Agora</a>
+  </div>
+</section>
+
+<!-- ======== MERCADO LIVRE ======== 
+<section class="ml-banner" id="compras">
+  <div class="ml-content reveal-up">
+    <span class="eyebrow">Loja Oficial</span>
+    <h2>Compre com segurança no Mercado Livre</h2>
+    <p>Produtos originais, entrega rastreada e a garantia que você já confia.</p>
+    <a target="_blank" rel="noopener" class="btn btn-dark">Ver Loja no Mercado Livre</a>
+  </div>
+  <div class="ml-media reveal-up">
+    <img src="./assets/images/ml-img.png" alt="Produtos Smart Repinturas no Mercado Livre">
+  </div>
+</section>
+-->
+<!-- ======== WHATSAPP ======== -->
+<section class="wpp-banner" id="atendimento">
+  <div class="wpp-media reveal-up">
+    <img src="./assets/images/zapzap-banner.png" alt="Atendimento via WhatsApp Smart Repinturas">
+  </div>
+  <div class="wpp-content reveal-up">
+    <span class="eyebrow">Compre Aqui</span>
+    <h2>Fale agora com nossa equipe pelo WhatsApp</h2>
+    <p>Tire dúvidas, peça orçamento e receba atendimento personalizado em minutos.</p>
+    <a href="https://wa.me/5516997085857" target="_blank" rel="noopener" class="btn btn-whats">Conversar Agora</a>
+  </div>
+</section> 
+
+<!-- ======== MARCAS ======== -->
+<section class="brands">
+  <div class="section-head reveal-up small">
+    <h5 class="eyebrow">Marcas Parceiras</h5>
+  </div>
+  <div class="brands-track">
+    <div class="brands-row" id="brandsRow">
+      <span>AUTOLUKS</span><span>MIRKA</span><span>ITAQUÁ</span><span>ADERE</span><span>ADELBRAS</span><span>NORTON</span><span>MAXI RUBBER</span><span>AUTOAMÉRICA</span>
+      <span>AUTOLUKS</span><span>MIRKA</span><span>ITAQUÁ</span><span>ADERE</span><span>ADELBRAS</span><span>NORTON</span><span>MAXI RUBBER</span><span>AUTOAMÉRICA</span>
+      <span>AUTOLUKS</span><span>MIRKA</span><span>ITAQUÁ</span><span>ADERE</span><span>ADELBRAS</span><span>NORTON</span><span>MAXI RUBBER</span><span>AUTOAMÉRICA</span>
+      <span>AUTOLUKS</span><span>MIRKA</span><span>ITAQUÁ</span><span>ADERE</span><span>ADELBRAS</span><span>NORTON</span><span>MAXI RUBBER</span><span>AUTOAMÉRICA</span>
+    </div>
+  </div>
+</section>
+
+<!-- ======== DEPOIMENTOS ======== -->
+<section class="testimonials">
+  <div class="section-head reveal-up">
+    <span class="eyebrow">Quem Confia</span>
+    <h2>O que dizem nossos clientes</h2>
+  </div>
+
+  <div class="testi-slider" id="testiSlider">
+    <div class="testi-track" id="testiTrack">
+
+      <div class="testi-card">
+        <div class="stars">★★★★★</div>
+        <p>"A colorimetria da Smart é impressionante. Fechamos a cor de primeira, sem retrabalho."</p>
+        <div class="testi-author">
+          <span class="avatar">RC</span>
+          <div><strong>Ricardo Camargo</strong><small>Ribeirão Preto - SP</small></div>
+        </div>
+      </div>
+
+      <div class="testi-card">
+        <div class="stars">★★★★★</div>
+        <p>"Entrega rápida e produtos de altíssima qualidade. Minha oficina não compra em outro lugar."</p>
+        <div class="testi-author">
+          <span class="avatar">FM</span>
+          <div><strong>Fernanda Melo</strong><small>Sertãozinho - SP</small></div>
+        </div>
+      </div>
+
+      <div class="testi-card">
+        <div class="stars">★★★★★</div>
+        <p>"O treinamento mudou a forma como minha equipe trabalha. Resultado visível no acabamento."</p>
+        <div class="testi-author">
+          <span class="avatar">JP</span>
+          <div><strong>João Pereira</strong><small>Franca - SP</small></div>
+        </div>
+      </div>
+
+      <div class="testi-card">
+        <div class="stars">★★★★★</div>
+        <p>"Suporte técnico excelente, sempre disponíveis para resolver qualquer dúvida na hora."</p>
+        <div class="testi-author">
+          <span class="avatar">AL</span>
+          <div><strong>Ana Lima</strong><small>Bauru - SP</small></div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="testi-dots" id="testiDots"></div>
+  </div>
+</section>
+
+<!-- ======== CONTATO ======== -->
+<section class="contact" id="contato">
+  <div class="section-head reveal-up">
+    <span class="eyebrow">Fale Conosco</span>
+    <h2>Vamos encontrar a cor certa para o seu projeto</h2>
+  </div>
+
+  <div class="contact-grid">
+    <div class="contact-info reveal-up">
+      <a href="https://wa.me/5516997085857" target="_blank" rel="noopener" class="contact-item">
+        <span class="ci-icon"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/></svg></span>
+        <div><strong>WhatsApp</strong><small>(16) 99708-5857</small></div>
+      </a>
+      <a href="https://instagram.com/smart.repintura" target="_blank" rel="noopener" class="contact-item">
+        <span class="ci-icon"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/></svg></span>
+        <div><strong>Instagram</strong><small>@smart.repintura</small></div>
+      </a>
+      <!-- <a target="_blank" rel="noopener" class="contact-item">
+        <span class="ci-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M3 9.5 12 4l9 5.5M5 8.5V19a1 1 0 0 0 1 1h4v-5h4v5h4a1 1 0 0 0 1-1V8.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <div><strong>Mercado Livre</strong><small>Loja Oficial Smart</small></div>
+      </a> -->
+      <a href="https://youtube.com" target="_blank" rel="noopener" class="contact-item">
+        <span class="ci-icon"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.01 2.01 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.01 2.01 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31 31 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.01 2.01 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A100 100 0 0 1 7.858 2zM6.4 5.209v4.818l4.157-2.408z"/></svg></span>
+        <div><strong>YouTube</strong><small>Smart Repinturas</small></div>
+      </a>
+      <div class="contact-item no-hover">
+        <span class="ci-icon"><svg viewBox="0 0 24 24" fill="none"><path d="M12 21s7-6.5 7-11.5A7 7 0 0 0 5 9.5C5 14.5 12 21 12 21Z" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="9.5" r="2.2" stroke="currentColor" stroke-width="1.6"/></svg></span>
+        <div><strong>Endereço</strong><small>Av. Marechal Costa e Silva, Nº 3435 — Ribeirão Preto, SP</small></div>
+      </div>
+    </div>
+
+    <form class="contact-form reveal-up" id="contactForm">
+      <div class="form-row">
+        <div class="field">
+          <label for="nome">Nome</label>
+          <input type="text" id="nome" name="nome" required placeholder="Seu nome completo">
+        </div>
+        <div class="field">
+          <label for="telefone">Telefone</label>
+          <input type="tel" id="telefone" name="telefone" required placeholder="(16) 00000-0000">
+        </div>
+      </div>
+      <div class="field">
+        <label for="email">E-mail</label>
+        <input type="email" id="email" name="email" required placeholder="voce@email.com">
+      </div>
+      <div class="field">
+        <label for="mensagem">Mensagem</label>
+        <textarea id="mensagem" name="mensagem" rows="4" required placeholder="Conte o que você precisa..."></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary full">Enviar Mensagem</button>
+      <p class="form-note" id="formNote"></p>
+    </form>
+  </div>
+
+  <div class="contact-map reveal-up">
+    <iframe
+      src="https://www.google.com/maps?q=Av.+Marechal+Costa+e+Silva,+3435,+Ribeir%C3%A3o+Preto+-+SP&output=embed"
+      title="Localização da Smart Repinturas no Google Maps"
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+      allowfullscreen></iframe>
+  </div>
+</section>
+
+<!-- ======== RODAPÉ ======== -->
+<footer class="site-footer">
+  <div class="rgb-line"></div>
+  <div class="footer-inner">
+
+    <div class="footer-brand">
+      <span class="brand-mark">SMART</span>
+      <span class="brand-sub">REPINTURAS</span>
+      <p>Tudo para sua repintura automotiva.</p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Contato</h4>
+      <p>Av. Marechal Costa e Silva, Nº 3435<br>Ribeirão Preto - SP</p>
+      <p>WhatsApp: (16) 99708-5857</p>
+      <p>@smart.repintura</p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Links Rápidos</h4>
+      <a href="#quem-somos">Quem Somos</a>
+      <a href="#produtos">Produtos</a>
+      <a href="#atendimento">Atendimento Online</a>
+      <a href="#contato">Contato</a>
+    </div>
+
+    <div class="footer-col">
+      <h4>Redes Sociais</h4>
+      <p>Acompanhe novidades e lançamentos.</p>
+      <div class="footer-social">
+        <a href="https://instagram.com/smart.repintura" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/></svg></a>
+        <a href="https://wa.me/5516997085857" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/></svg></a>
+        <a href="https://youtube.com" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.01 2.01 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.01 2.01 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31 31 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.01 2.01 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A100 100 0 0 1 7.858 2zM6.4 5.209v4.818l4.157-2.408z"/></svg></a>
+         <!-- <a target="_blank" rel="noopener" aria-label="Mercado Livre"><svg viewBox="0 0 24 24" fill="none"><path d="M3 9.5 12 4l9 5.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></a> -->
+      </div>
+    </div>
+
+  </div>
+  <div class="footer-bottom">
+    <p>© <span id="year"></span> Smart Repinturas. Todos os direitos reservados.</p>
+    <p>© <span id="year"></span> Developed by Murilo</p>
+  </div>
+</footer>
+
+<!-- ======== BOTÃO FLUTUANTE WHATSAPP ======== -->
+<a href="https://wa.me/5516997085857" target="_blank" rel="noopener" class="float-whats" aria-label="Fale no WhatsApp">
+  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
+  <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
+</svg>
+</a>
+
+<script src="js/scroll.js"></script>
+<script src="js/slider.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
