@@ -6,7 +6,15 @@
 @media (max-width:1200px){
   .diff-grid{ grid-template-columns:repeat(3,1fr); }
   .product-grid{ grid-template-columns:repeat(5,1fr); }
-  .main-nav ul{ gap:22px; }
+  .main-nav ul{ gap:18px; }
+  .site-header img{ height: 150px; }
+}
+
+/* ---------- Notebook com menu completo (1025–1200px) ----------
+   a logo cresce até onde cabe sem quebrar o menu em duas linhas */
+@media (min-width:1025px) and (max-width:1200px){
+  .site-header img{ height: clamp(88px, calc((100vw - 897px) / 1.5), 150px); }
+  .site-header.scrolled img{ height: clamp(71px, calc((100vw - 897px) / 1.5), 121px); }
 }
 
 /* ---------- Tablet (≤1024px) ---------- */
@@ -52,14 +60,15 @@
   .hero-slide{ background-position:center 30%; }
   .hero-slide img{ object-position:center 30%; }
   .training-content, .ml-content, .wpp-content{ padding:60px 6vw; }
-  .site-header img{ height: 63px; width:auto;}
+  .site-header img{ height: 139px; width:auto;}
   .hero-media{ inset:24px; }
 }
 
 /* ---------- Smartphone (≤640px) ---------- */
 @media (max-width:640px){
   :root{ --header-h:74px; }
-  .site-header img{ height: 52.5px; width:auto;}
+  .site-header img{ height: 116px; width:auto;}
+  .site-header.scrolled img{ height: 102px; }
   .hero-media{ inset:16px; border-radius:12px; }
   .header-inner{ padding:0 18px; }
   .brand .brand-mark{ font-size:1.2rem; }

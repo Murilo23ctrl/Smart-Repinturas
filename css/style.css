@@ -165,7 +165,7 @@ section{ position:relative; padding:110px 0; }
 .btn-cta-header{
   padding:11px 20px;
   font-size:.72rem;
-  background:var(--white);
+  background:#25D366;
   color:var(--black-0);
   border-radius:5px;
 }
@@ -189,12 +189,12 @@ section{ position:relative; padding:110px 0; }
   background:rgba(5,5,5,.92);
 }
 .site-header img{
- height: 75.6px; /* logo maior, mantendo a proporção (largura automática) */
+ height: 98px; /* logo maior, mantendo a proporção (largura automática); o PNG tem margem transparente, então pode passar um pouco da altura do header */
  width: auto;
  transition: height .35s var(--ease);
 }
 .site-header.scrolled img{
- height: 54.6px; /* acompanha o header reduzido ao rolar a página */
+ height: 71px; /* acompanha o header reduzido ao rolar a página */
 }
 .header-inner{
   height:100%;
@@ -207,7 +207,7 @@ section{ position:relative; padding:110px 0; }
   gap:24px;
 }
 
-.brand{ display:flex; flex-direction:column; line-height:1; }
+.brand{ display:flex; flex-direction:column; line-height:1; flex-shrink:0; }
 .brand .brand-mark{
   font-family:var(--font-display);
   font-size:1.5rem;
@@ -302,6 +302,7 @@ section{ position:relative; padding:110px 0; }
   width:100%; height:100%;
   object-fit:cover;
   object-position:center;
+  filter:brightness(1.15); /* imagem 15% mais clara */
 }
 .hero-slide.active{ opacity:1; }
 .hero-scrim{
@@ -497,6 +498,65 @@ section{ position:relative; padding:110px 0; }
 }
 .product-card:hover{ transform:translateY(-5px); border-color:rgba(255,255,255,.2); }
 .product-card:hover .pc-img{ transform:scale(1.08); }
+
+/* ---------- Roda giratória de produtos (ativada pelo slider.js) ---------- */
+.product-grid.pw-on{
+  --pw-card: clamp(170px, 19vw, 240px);
+  display:block;
+  position:relative;
+  max-width:1320px;
+  padding:0;
+  overflow:hidden;
+  touch-action:pan-y;
+  user-select:none;
+  -webkit-user-select:none;
+  cursor:grab;
+  -webkit-mask-image:linear-gradient(90deg, transparent 0, #000 12%, #000 88%, transparent 100%);
+          mask-image:linear-gradient(90deg, transparent 0, #000 12%, #000 88%, transparent 100%);
+}
+.product-grid.pw-on.is-dragging{ cursor:grabbing; }
+.product-grid.pw-on.has-cursor{ cursor:none; }
+.product-grid.pw-on:focus-visible{ outline:2px solid rgba(255,255,255,.35); outline-offset:-2px; }
+.pw-slot{
+  position:absolute;
+  left:50%; top:24px;
+  width:var(--pw-card);
+  will-change:transform, opacity;
+}
+.pw-slot .product-card{ width:100%; }
+.pw-slot.is-center .product-card{
+  border-color:rgba(255,255,255,.28);
+  box-shadow:0 18px 50px rgba(0,0,0,.55);
+}
+.pw-hint{
+  display:flex; align-items:center; justify-content:center; gap:12px;
+  margin:22px auto 0;
+  font-size:.68rem;
+  font-weight:700;
+  letter-spacing:.22em;
+  text-transform:uppercase;
+  color:var(--gray-mid);
+}
+.pw-hint svg{ width:16px; height:16px; }
+.pw-cursor{
+  position:fixed; left:0; top:0;
+  width:92px; height:92px;
+  margin:-46px 0 0 -46px;
+  border-radius:50%;
+  border:2px solid transparent;
+  background:linear-gradient(var(--black-0), var(--black-0)) padding-box, var(--rgb-grad) border-box;
+  color:var(--white);
+  display:grid; place-items:center;
+  font-size:.62rem;
+  font-weight:800;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  pointer-events:none;
+  z-index:1200;
+  opacity:0;
+  transform:translate3d(-200px,-200px,0) scale(0);
+  transition:opacity .25s var(--ease);
+}
 
 /* =========================================================
    COLORIMETRIA
@@ -841,6 +901,40 @@ section{ position:relative; padding:110px 0; }
 }
 .footer-social svg{ width:16px; height:16px; }
 .footer-social a:hover{ background:var(--white); color:var(--black-0); }
+
+/* =========================================================
+   CORES DAS REDES SOCIAIS (cada ícone com a cor do seu app)
+   header, seção do YouTube, contato e rodapé
+========================================================= */
+.icon-btn[href*="instagram.com"],
+.contact-item[href*="instagram.com"] .ci-icon,
+.footer-social a[href*="instagram.com"]{
+  background:radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
+  border-color:transparent;
+  color:#fff;
+}
+.icon-btn[href*="youtube.com"],
+.contact-item[href*="youtube.com"] .ci-icon,
+.footer-social a[href*="youtube.com"],
+.yt-logo{
+  background:#ff0000;
+  border-color:#ff0000;
+  color:#fff;
+}
+.icon-btn[href*="wa.me"],
+.contact-item[href*="wa.me"] .ci-icon,
+.footer-social a[href*="wa.me"]{
+  background:#25d366;
+  border-color:#25d366;
+  color:#06210f;
+}
+/* ao passar o mouse: mantém a cor do app e ganha um brilho */
+.icon-btn[href*="instagram.com"]:hover,
+.footer-social a[href*="instagram.com"]:hover{ box-shadow:0 8px 22px rgba(214,36,159,.4); }
+.icon-btn[href*="youtube.com"]:hover,
+.footer-social a[href*="youtube.com"]:hover{ box-shadow:0 8px 22px rgba(255,0,0,.35); }
+.icon-btn[href*="wa.me"]:hover,
+.footer-social a[href*="wa.me"]:hover{ box-shadow:0 8px 22px rgba(37,211,102,.35); }
 
 .footer-bottom{
   border-top:1px solid rgba(255,255,255,.07);
